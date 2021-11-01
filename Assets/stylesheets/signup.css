@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat
+}
+.card {
+    border: none;
+    color: #57557a;
+    background: #ffffff;
+    box-shadow: 20px 20px 80px rgb(206, 206, 206);
+    max-width: 500px;
+    margin: 15px auto;
+    height:auto;  
+    box-sizing: border-box;
+}
+.card > p {
+    background-color: #400485;
+    color: #ffffff;
+}
+p {
+     font-size: 20px;
+     font-weight: 500;
+     font-family: 'Kaushan Script', cursive;
+      font-weight: bold;
+    color: #400485;
+    margin-bottom: 5px;
+    
+}
+a {
+    text-decoration: none;
+}
+.set-icon .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+    
+    /* background-color: #400485; */
+    color: #ffffff;
+}
+.set-icon .fa:hover {
+    cursor: pointer;
+    background-color: #400485;
+    color: #fff;
+}
+.fa-google {
+    color: #ffffff;
+    background-color:#EA4335;
+}
+.fa-twitter {
+    color: #ffffff;
+    background-color:#56ABEC ;
+}
+.fa-facebook {
+    color: #ffffff;
+    background-color:#1775f1 ;
+}
+.fa-instagram {
+    color: #ffffff;
+    background-color: #fe4164;
+}
+.form-block .fa {
+    width: 40px;
+    border: none;
+    transition: all 0.2s linear;
+}
+.form-block {
+    width: 100%;
+    margin: 5px auto 20px;
+    /* background-color: royalblue; */
+} 
+.form-block span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #400485;
+    
+}
+.my-form {
+    padding:0 25px 0 35px ;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.my-form label {
+    color: #1775f1;
+    margin-bottom: 1px;
+}
+.form-control {
+    border: 1px solid #400485 ;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    letter-spacing:1px ;
+}
+.form-control:focus {
+    border: 1px solid #400485;
+    /* background-color: #fe4164; */
+    box-shadow: none;
+    color: #400485;
+    letter-spacing:1px ;
+}
+.form-check-input {
+    width: 1rem ;
+    height: 1rem ;
+    margin-top:5px ;
+}
+.btn-primary {
+   background: #400485; 
+   border: none;
+   /* border-radius: 50px; */
+}
+.btn-primary:hover {
+    background-color:#00695c;
+    
+}
+.fb-btn {
+    background-color:#1775f1 ;
+    color: #ffffff;
+}
+.google-btn {
+    background-color:#EA4335 ;
+    color: #ffffff;
+}
+.bn a {
+    text-decoration: none;
+    /* color: #57557a; */
+    color: #400485;
+    float: right;
+    font-weight: 700;
+}
+.bn a:hover {
+    color:#fe4164 ;
+    cursor: pointer;
+}
+@media(max-width: 768px) {
+    .card {
+        margin-top: 0;
+    }
+    .row {
+        --bs-gutter-x:0;
+        --bs-gutter-y:0;
+    }
+    .set-icon .fa {
+        margin-right: 12px;
+    }
+    .form-check-lable {
+        font-size: 12px;
+    }
+    .form-check-input {
+        width: .8rem;
+        height: .8rem;
+    }
+    .bn {
+        width: 50%;
+
+        
+    }
+    .bn a {
+        font-size:12px ;   
+    }
+    .form-block {
+        width: 100%;
+        margin: 10px auto 10px;
+    } 
+
+
+
+    
+}

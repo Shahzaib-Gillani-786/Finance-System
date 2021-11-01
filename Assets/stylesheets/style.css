@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+body {
+    margin-top: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+    background-color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat
+}
+#back-cont {
+    background: -webkit-linear-gradient(45deg, #400485 48%, #ffffff 48%);
+    background: -webkit-linear-gradient(left, #400485 48%, #ffffff 48%);
+    background: linear-gradient(180deg, #EA4335  42%, #ffffff  42%);
+    height: 4rem;
+    color: #f7f7f7;
+    height: 100vh;
+    position: relative;
+    top: 0px; 
+}
+#inner-cont {
+    width: 88%;
+    background-color:#f2f2f2;
+    /* margin-left: 500px; */
+    position: relative;
+    top: 50px;
+    border-radius: 5px;
+    padding: 0;
+    min-height: 550px;
+}
+#inner-cont2 {
+    width: 88%;
+    background-color:#ffffff;
+    /* margin-left: 500px; */
+    position: relative;
+    top: 40px;
+    border-radius: 8px;
+    padding: 0;
+    min-height: 400px;
+}
+#inner-cont2 .header {
+    border-radius:8px ;
+    background-color: #EA4335;
+}
+#inner-cont2 .header button {
+    background-color: #121212;
+    color: #ffffff;
+    border: none;
+}
+.navbar {
+    background-color: #121212;
+    color: #ffffff;
+    border-radius: 4px;
+}
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    color: #ffffff;
+}
+.nav-link {
+    color: #ffffff;
+}
+/* #right {
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+} */
+
+/* table */
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+  .table-image 
+    td, th {
+      vertical-align: middle;
+    }
+
+
+
+    @media(max-width: 768px){
+        .row {
+            --bs-gutter-x:0;
+            --bs-gutter-y:0;
+        }
+
+    }
+  

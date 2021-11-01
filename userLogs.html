@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/Style/style.css">
+    <link rel="stylesheet" href="./Assets/Style/login.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Assets/stylesheets/style.css">
+
+    <title>User Logs Listing</title>
+</head>
+<body>
+     <div class="container-fluid  " id="back-cont">
+    <!-- <div class="container   " id="back-cont"> -->
+    <div class="container" id="inner-cont">
+        <nav class="navbar x navbar-expand-lg navbar-ligh">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Alpha Finance</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Transactions</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">User
+                                    Logs</a>
+                        </li>
+    
+    
+                    </ul>
+                    <section class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item WelcomeTag dropdown">
+    
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="userProfile.html">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings
+                                            </a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="login.html">Log
+                                                Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </nav>
+       
+    
+      <div class="container" id="inner-cont2">
+        <div class="container-fluid header  ">
+          <div class="row py-3">
+            <div class="col-sm-12 ">
+              <a class="navbar-brand" href="#">Transaction List Details </a> 
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-bordered table-striped my-3">
+                <!-- search bar-->
+                <thead class="table-head">
+                    <tr>
+                        <!-- <th scope="col">#</th> -->
+                        <th scope="col">Date </th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">User Agent</th>
+                        <th scope="col">User Ip</th>
+                        <!-- <th scope="col">Action</th> -->
+                    </tr>
+                </thead>
+                <tbody class="table-body userLogTable" >
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+ 
+  </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./scripts/currentUser.js"></script>
+    <script src="./scripts/userLogs.js"></script>
+</body>
+
+</html>

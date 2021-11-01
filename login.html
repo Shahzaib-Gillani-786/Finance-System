@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- foonts link -->
+    <script src="https://use.fontawesome.com/0766a4ccef.js"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Assets/stylesheets/login.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row  w-100 d-flex justify-content-center align-item-center ">
+            <div class="col-12 col-lg-6 col-md-8 col-xxl-5">
+                <div class="card  px-2 ">
+                    <p class="text-center my-2 text-capitalize"><span>connect with us</span></p>
+                    <div class="row  mx-auto  set-icon">
+                        <div class="col-4">
+                            <a href="" target="_blank"> <i class="fa fa-twitter"></i></a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" target="_blank"> <i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="form-block">
+                        <div class="row  ">
+                            <div class="col-12 mx-auto text-center">
+                                <h4><span class="main-heading">Enter Your login details</span></h4>
+                            </div>
+                        </div>
+                        <form action="" class="my-form">
+                            <div class="mb-2 mt-2">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">password</label>
+                                <input type="password" class="form-control" id="pasw" placeholder="password">
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-6  col-6">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" name="">
+                                        <label for="" class="form-check-lable">Remember Me</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 bn text-capitalize">
+                                    <a href="/forgot.html" target="_blank">Forgot Password ?</a>
+                                </div>
+                            </div>
+
+                            <div class="mt-2">
+                                <button onclick="logIn()" class="btn btn-primary btn-block btn-lg w-100" type="button">
+                                    <small><i class="fa fa-user"></i>Login</small>
+                                </button>
+
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-sm-6 mx-auto text-center">
+                                    <p class="main-heading">or login with</p>
+                                </div>
+                                <div class="row d-flex justify-content-center align-item-center ">
+                                    <div class=" col-sm-5  ">
+                                        <button  class="btn  btn-block fb-btn   w-100" type="button">
+                                            <small><i class="fa fa-facebook"></i> Facebok</small>
+                                        </button>
+
+                                    </div>
+                                    <div class=" col-sm-5  ">
+                                        <button class="btn  btn-block  google-btn w-100" type="button">
+                                            <small><i class="fa fa-google"></i> Google</small>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row mt-2  ">
+                                <div class="col-sm-12  mx-auto text-center">
+                                    <p><span class="main-heading">Don't have account ?<br><a href="/index1.html"
+                                                target="_blank">signup Now</a> </span></p>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sinup -->
+    <script>
+        // js for login
+        function logIn() {
+
+
+            let email = document.getElementById('Email').value;
+            let password = document.getElementById('pasw').value;
+            //if name.value is available then good else throw message is to implement    let data = window.localStorage.getItem(name.value);    data = JSON.parse(data)
+            let localEmail = localStorage.getItem("email");
+            let localPassword = localStorage.getItem("password");
+            if (email.value == localEmail && password.value == localPassword) {
+                alert('You are logged in.');
+                window.location.href = "index.html";
+            } else {
+                alert('Error on login');
+            }
+        }
+
+
+
+    </script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

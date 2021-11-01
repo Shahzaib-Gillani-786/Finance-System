@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- foonts link -->
+  <script src="https://use.fontawesome.com/0766a4ccef.js"></script>
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+  <!-- my css sheet -->
+  <link rel="stylesheet" href="/Assets/stylesheets/style.css">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container-fluid  " id="back-cont">
+    <!-- <div class="container   " id="back-cont"> -->
+    <div class="container" id="inner-cont">
+      <nav class="navbar x navbar-expand-lg navbar-ligh">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Alpha Finance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Transactions</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="userLogs.html">User
+                                Logs</a>
+                    </li>
+
+
+                </ul>
+                <section class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item WelcomeTag dropdown">
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="userProfile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings
+                                        </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="login.html">Log
+                                            Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </nav>
+   
+      <div class="container" id="inner-cont2">
+        <div class="container-fluid header  ">
+          <div class="row py-3">
+            <div class="col-sm-5 ">
+              <a class="navbar-brand" href="#">Transaction List Details </a> 
+            </div>
+            <div class="col-sm-7">
+              <div class="row text-center d-flex justify-content-center align-items-center">
+             <div class="col-5">
+              <button type="button" data-bs-toggle="modal" data-bs-target="#SearchModal" data-bs-whatever="@mdo"
+              class="btn  btn-block btn-outline-success">Advance
+                Search</button>
+             </div>
+             <div class="col-5">
+              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+              class="btn btn-block ">Add
+              new Transaction</button>
+
+             </div>
+      
+            </div>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-bordered table-striped" id="myTable">
+                <!-- search bar-->
+                <div class="container-fluid my-3">
+                  <div class="row">
+                    <div class="col-sm-12  ">
+                      <form class="d-flex ">
+                        <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search"
+                           id="myInput" onkeyup="searchFun()" autocomplete="off">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <thead class="table-head">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Fundraisers</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body "  >
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- modal for add new Transactions -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div style="background-color: #121212; border: none ;color: #fff;" class="modal-content ">
+        <div style="height: 100vh;" class="d-flex align-items-center
+                      justify-content-center">
+          <form class="p-5">
+            <h4 class="form-txt mb-4 text-center">
+              Add new Transaction
+              </h2>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="date" class="form-control" placeholder="Date" value="2021-11-01" min="2018-01-01"
+                    max="2025-12-31" required id="AddTransDate" autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" placeholder="Name" required id="AddTransName"
+                    autocomplete="off" aria-describedby="emailHelp">
+                  
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="email" class="form-control" placeholder="Email" required id="AddTransEmail"
+                    autocomplete="off" aria-describedby="emailHelp">
+                 
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" placeholder="Fundraiser" required id="AddTransFund"
+                    autocomplete="off" aria-describedby="emailHelp">
+                
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" placeholder="Amount" required id="AddTransAmount"
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="text-center">
+
+                <button class="btn btn-block btn-dark
+                                  px-5 AddTransBtn">Add Now</button>
+              </div>
+              <hr class="line">
+              <div>
+                <h6 class="text-center">Follow Us On</h3>
+                  <div class="d-flex align-items-center
+                                  justify-content-center">
+                    <span class="social-icon mx-2 p-2">
+                      <i class="fa fa-instagram fa-lg"></i>
+                    </span>
+                    <span class="social-icon mx-2 p-2"> <i class="fa fa-twitter-square fa-lg"></i></span>
+                    <span class="social-icon mx-2 p-2"> <i class="fa fa-facebook-square
+                                          fa-lg"></i></span>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End modal for add new Transactions -->
+  <!-- modal for Advance search -->
+  <div class="modal fade" id="SearchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div style="background-color: #121212; border: none ;color: #fff;" class="modal-content">
+        <div style="height: 100vh;" class="d-flex align-items-center
+                    justify-content-center">
+          <form class="p-5">
+            <h4 class="form-txt mb-4 text-center">
+              Search Transaction
+              </h2>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" placeholder="Date" id="searchByDate" required
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" required placeholder="Name" id="searchByName"
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="email" class="form-control" required placeholder="Email" id="searchByEmail"
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" required placeholder="Fundraiser" id="searchByFund"
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-parent">
+                  <input type="text" class="form-control" required placeholder="Amount" id="searchByAmount"
+                    autocomplete="off" aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-block btn-dark
+                                px-5 searchBtn">Search
+                  Now</button>
+              </div>
+
+
+
+
+              <hr class="line">
+
+              <div>
+                <h6 class="text-center">Follow Us On</h3>
+                  <div class="d-flex align-items-center
+                                justify-content-center">
+                    <span class="social-icon mx-2 p-2">
+                      <i class="fa fa-instagram fa-lg"></i>
+                    </span>
+                    <span class="social-icon mx-2 p-2"> <i class="fa fa-twitter-square fa-lg"></i></span>
+                    <span class="social-icon mx-2 p-2"> <i class="fa fa-facebook-square
+                                        fa-lg"></i></span>
+                  </div>
+              </div>
+
+          </form>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- End modal for Advance search -->
+
+  
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- my own js files -->
+  <!-- <script src="./scripts/login.js"></script> -->
+  <script src="./scripts/listingScript.js"></script>
+  <!-- <script src="./scripts/currentUser.js"></script> -->
+   <!-- js for search -->
+   <script>
+    const searchFun = () =>{
+      let filter = document.getElementById("myInput").value.toUpperCase();
+      let myTable = document.getElementById("myTable");
+      let tr = myTable.getElementsByTagName("tr");
+      // for loop
+      for(var i=0; i<tr.length; i++){
+        let td = tr[i].getElementsByTagName("td")[2];
+
+        // Condition
+        if(td){
+          let textValue = td.textContent || td.innerHTML;
+
+          if(textValue.toUpperCase().indexOf(filter)> -1){
+            tr[i].style.display = "";
+          } else{
+            tr[i].style.display ="none";
+
+          }
+
+          
+        }
+      }
+      
+    }
+     
+  </script>
+  <!-- js for search -->
+ 
+  
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
